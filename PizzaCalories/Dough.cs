@@ -35,7 +35,7 @@ namespace PizzaCalories
             }
             set
             {
-                if (value != "White" && value != "Wholegrain")
+                if (value.ToLower() != "white" && value.ToLower() != "wholegrain")
                 {
                     throw new Exception("Invalid type of dough.");
                 }
@@ -82,24 +82,24 @@ namespace PizzaCalories
         {
             double totalCalsPerGram = BaseCalsPerGram;
 
-            if (this.Type == "White")
+            if (this.Type.ToLower() == "white")
             {
                 totalCalsPerGram *= WhiteCals;
             }
-            else if (this.Type == "Wholegrain")
+            else if (this.Type.ToLower() == "wholegrain")
             {
                 totalCalsPerGram *= WholegrainCals;
             }
 
-            if (this.BakingTechnique == "Crispy")
+            if (this.BakingTechnique.ToLower() == "crispy")
             {
                 totalCalsPerGram *= CrispyCals;
             }
-            else if (this.BakingTechnique == "Chewy")
+            else if (this.BakingTechnique.ToLower() == "chewy")
             {
                 totalCalsPerGram *= ChewyCals;
             }
-            else if (this.BakingTechnique == "Homemade")
+            else if (this.BakingTechnique.ToLower() == "homemade")
             {
                 totalCalsPerGram *= HomemadeCals;
             }

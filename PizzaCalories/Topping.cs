@@ -62,19 +62,19 @@ namespace PizzaCalories
         {
             double totalCals = BaseCalsPerGram;
 
-            if (this.Type == "Meat")
+            if (this.Type.ToLower() == "meat")
             {
                 totalCals *= CalsPerGramForMeat;
             }
-            else if (this.Type == "Veggies")
+            else if (this.Type.ToLower() == "veggies")
             {
                 totalCals *= CalsPerGramForVeggies;
             }
-            else if (this.Type == "Cheese")
+            else if (this.Type.ToLower() == "cheese")
             {
                 totalCals *= CalsPerGramForCheese;
             }
-            else if (this.Type == "Sauce")
+            else if (this.Type.ToLower() == "sauce")
             {
                 totalCals *= CalsPerGramForSauce;
             }
