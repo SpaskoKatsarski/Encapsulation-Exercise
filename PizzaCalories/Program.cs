@@ -13,6 +13,7 @@ namespace PizzaCalories
                 Dough dough = new Dough(doughInfo[1], doughInfo[2], double.Parse(doughInfo[3]));
                 Pizza pizza = new Pizza(pizzaName[1], dough);
 
+                //TODO: Fix the calculation of the total calories (see the tests in judge).
                 string input;
                 while ((input = Console.ReadLine()) != "END")
                 {
